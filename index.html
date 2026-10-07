@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Keshav Trekking | Uttarakhand</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4efe5;
+            color: #26382c;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 7%;
+            z-index: 10;
+            color: white;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        .hero {
+            min-height: 92vh;
+
+            background:
+                linear-gradient(
+                    rgba(15, 35, 24, 0.55),
+                    rgba(15, 35, 24, 0.70)
+                ),
+                url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+
+            padding: 120px 7%;
+
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 720px;
+        }
+
+        .small-title {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 82px);
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #c69a55;
+            color: #17251c;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .section-heading h2 {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            color: #68736a;
+        }
+
+        .treks {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1200px;
+            margin: 45px auto 0;
+        }
+
+        .trek-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+        }
+
+        .trek-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .trek-content {
+            padding: 25px;
+        }
+
+        .trek-content h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .trek-content p {
+            color: #68736a;
+        }
+
+        .trek-info {
+            margin: 18px 0;
+            color: #4d5b50;
+            font-size: 14px;
+        }
+
+        .why {
+            background: #e7e0d2;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1100px;
+            margin: 45px auto 0;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 28px 18px;
+        }
+
+        .icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #68736a;
+            font-size: 14px;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about p {
+            margin-top: 20px;
+            color: #68736a;
+            line-height: 1.8;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 12px;
+            max-width: 1100px;
+            margin: 40px auto 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .booking {
+            background:
+                linear-gradient(
+                    rgba(25, 50, 35, 0.88),
+                    rgba(25, 50, 35, 0.88)
+                ),
+                url("https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1600&q=85");
+
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+        }
+
+        .booking h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .booking p {
+            margin-bottom: 30px;
+            color: #dce4dd;
+        }
+
+        footer {
+            background: #17251c;
+            color: white;
+            padding: 30px 7%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media(max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: 85vh;
+                padding: 110px 6% 70px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+            .treks {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery img {
+                height: 230px;
+            }
+
+            footer {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            KESHAV TREKKING
+        </div>
+
+        <div class="nav-links">
+            <a href="#treks">Treks</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                Uttarakhand • Himalayan Adventures
+            </div>
+
+            <h1>
+                Trek Beyond
+                <br>
+                The Ordinary.
+            </h1>
+
+            <p>
+                Explore the forests, trails and mountain
+                landscapes of Uttarakhand on foot.
+            </p>
+
+            <a href="#treks" class="button">
+                EXPLORE TREKS
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <section id="treks">
+
+        <div class="section-heading">
+
+            <h2>
+                Choose Your Adventure
+            </h2>
+
+            <p>
+                Discover the mountains of Uttarakhand
+                through trekking experiences.
+            </p>
+
+        </div>
+
+
+        <div class="treks">
+
+            <div class="trek-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1000&q=80"
+                    alt="Mountain trekking"
+                >
+
+                <div class="trek-content">
+
+                    <h3>
+                        Nag Tibba Trek
+                    </h3>
+
+                    <p>
+                        A beautiful Himalayan adventure
+                        through forests and mountain trails.
+                    </p>
+
+                    <div class="trek-info">
+                        🥾 2 Days • Moderate
+                    </div>
+
+                    <a href="#contact" class="button">
+                        VIEW TREK
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="trek-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1000&q=80"
+                    alt="Himalayan mountains"
+                >
+
+                <div class="trek-content">
+
+                    <h3>
+                        More Treks
+                    </h3>
+
+                    <p>
+                        More Uttarakhand trekking
+                        experiences can be added here.
+                    </p>
+
+                    <div class="trek-info">
+                        🏔️ Uttarakhand
+                    </div>
+
+                    <a href="#contact" class="button">
+                        EXPLORE
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="trek-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=1000&q=80"
+                    alt="Trekking trail"
+                >
+
+                <div class="trek-content">
+
+                    <h3>
+                        Your Next Adventure
+                    </h3>
+
+                    <p>
+                        Add another trek here when
+                        the company expands.
+                    </p>
+
+                    <div class="trek-info">
+                        🥾 New Adventure
+                    </div>
+
+                    <a href="#contact" class="button">
+                        DISCOVER
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="why">
+
+        <div class="section-heading">
+
+            <h2>
+                Why Trek With Us?
+            </h2>
+
+            <p>
+                Adventure is better when the experience
+                is authentic and responsible.
+            </p>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature">
+
+                <div class="icon">
+                    🏔️
+                </div>
+
+                <h3>
+                    Local Experience
+                </h3>
+
+                <p>
+                    Discover Uttarakhand beyond
+                    the usual tourist routes.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="icon">
+                    🥾
+                </div>
+
+                <h3>
+                    Small Groups
+                </h3>
+
+                <p>
+                    Enjoy a more personal trekking
+                    experience.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="icon">
+                    🌲
+                </div>
+
+                <h3>
+                    Into Nature
+                </h3>
+
+                <p>
+                    Walk through forests, villages
+                    and mountain trails.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Real Experiences
+                </h3>
+
+                <p>
+                    Experience the Himalayas naturally.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="about">
+
+        <div class="about">
+
+            <h2>
+                Discover Uttarakhand
+            </h2>
+
+            <p>
+                From quiet forest trails to wide
+                Himalayan views, Uttarakhand offers
+                adventures that stay with you.
+            </p>
+
+            <p>
+                Keshav Trekking aims to help travellers
+                experience the mountains beyond the
+                ordinary tourist route.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section id="gallery">
+
+        <div class="section-heading">
+
+            <h2>
+                Moments From The Mountains
+            </h2>
+
+            <p>
+                Real photographs from the company's
+                treks can be added here.
+            </p>
+
+        </div>
+
+
+        <div class="gallery">
+
+            <img
+                src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1000&q=80"
+                alt="Himalayan landscape"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=800&q=80"
+                alt="Mountain trekking"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=800&q=80"
+                alt="Mountain landscape"
+            >
+
+        </div>
+
+    </section>
+
+
+    <section class="booking" id="contact">
+
+        <h2>
+            Ready For The Mountains?
+        </h2>
+
+        <p>
+            Start planning your Himalayan adventure.
+        </p>
+
+        <a href="#" class="button">
+            BOOK / ENQUIRE
+        </a>
+
+    </section>
+
+
+    <footer>
+
+        <div>
+            © 2026 Keshav Trekking
+        </div>
+
+        <div>
+            Uttarakhand, India
+        </div>
+
+    </footer>
+
+</body>
+
+</html> <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Keshav Trekking | Uttarakhand</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4efe5;
+            color: #26382c;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 7%;
+            z-index: 10;
+            color: white;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        .hero {
+            min-height: 92vh;
+
+            background:
+                linear-gradient(
+                    rgba(15, 35, 24, 0.55),
+                    rgba(15, 35, 24, 0.70)
+                ),
+                url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+
+            padding: 120px 7%;
+
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 720px;
+        }
+
+        .small-title {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 82px);
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #c69a55;
+            color: #17251c;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .section-heading h2 {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            color: #68736a;
+        }
+
+        .treks {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1200px;
+            margin: 45px auto 0;
+        }
+
+        .trek-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+        }
+
+        .trek-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .trek-content {
+            padding: 25px;
+        }
+
+        .trek-content h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .trek-content p {
+            color: #68736a;
+        }
+
+        .trek-info {
+            margin: 18px 0;
+            color: #4d5b50;
+            font-size: 14px;
+        }
+
+        .why {
+            background: #e7e0d2;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1100px;
+            margin: 45px auto 0;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 28px 18px;
+        }
+
+        .icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #68736a;
+            font-size: 14px;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about p {
+            margin-top: 20px;
+            color: #68736a;
+            line-height: 1.8;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 12px;
+            max-width: 1100px;
+            margin: 40px auto 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .booking {
+            background:
+                linear-gradient(
+                    rgba(25, 50, 35, 0.88),
+                    rgba(25, 50, 35, 0.88)
+                ),
+                url("https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1600&q=85");
+
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+        }
+
+        .booking h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .booking p {
+            margin-bottom: 30px;
+            color: #dce4dd;
+        }
+
+        footer {
+            background: #17251c;
+            color: white;
+            padding: 30px 7%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media(max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: 85vh;
+                padding: 110px 6% 70px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+            .treks {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery img {
+                height: 230px;
+            }
+
+            footer {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            KESHAV TREKKING
+        </div>
+
+        <div class="nav-links">
+            <a href="#treks">Treks</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                Uttarakhand • Himalayan Adventures
+            </div>
+
+            <h1>
+                Trek Beyond
+                <br>
+                The Ordinary.
+            </h1>
+
+            <p>
+                Explore the forests, trails and mountain
+                landscapes of Uttarakhand on foot.
+            </p>
+
+            <a href="#treks" class="button">
+                EXPLORE TREKS
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <section id="treks">
+
+        <div class="section-heading">
+
+            <h2>
+                Choose Your Adventure
+            </h2>
+
+            <p>
+                Discover the mountains of Uttarakhand
+                through trekking experiences.
+            </p>
+
+        </div>
+
+
+        <div class="treks">
+
+            <div class="trek-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1000&q=80"
+                    alt="Mountain trekking"
+                >
+
+                <div class="trek-content">
+
+                    <h3>
+                        Nag Tibba Trek
+                    </h3>
+
+                    <p>
+                        A beautiful Himalayan adventure
+                        through forests and mountain trails.
+                    </p>
+
+                    <div class="trek-info">
+                        🥾 2 Days • Moderate
+                    </div>
+
+                    <a href="#contact" class="button">
+                        VIEW TREK
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="trek-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1000&q=80"
+                    alt="Himalayan mountains"
+                >
+
+                <div class="trek-content">
+
+                    <h3>
+                        More Treks
+                    </h3>
+
+                    <p>
+                        More Uttarakhand trekking
+                        experiences can be added here.
+                    </p>
+
+                    <div class="trek-info">
+                        🏔️ Uttarakhand
+                    </div>
+
+                    <a href="#contact" class="button">
+                        EXPLORE
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="trek-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=1000&q=80"
+                    alt="Trekking trail"
+                >
+
+                <div class="trek-content">
+
+                    <h3>
+                        Your Next Adventure
+                    </h3>
+
+                    <p>
+                        Add another trek here when
+                        the company expands.
+                    </p>
+
+                    <div class="trek-info">
+                        🥾 New Adventure
+                    </div>
+
+                    <a href="#contact" class="button">
+                        DISCOVER
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="why">
+
+        <div class="section-heading">
+
+            <h2>
+                Why Trek With Us?
+            </h2>
+
+            <p>
+                Adventure is better when the experience
+                is authentic and responsible.
+            </p>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature">
+
+                <div class="icon">
+                    🏔️
+                </div>
+
+                <h3>
+                    Local Experience
+                </h3>
+
+                <p>
+                    Discover Uttarakhand beyond
+                    the usual tourist routes.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="icon">
+                    🥾
+                </div>
+
+                <h3>
+                    Small Groups
+                </h3>
+
+                <p>
+                    Enjoy a more personal trekking
+                    experience.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="icon">
+                    🌲
+                </div>
+
+                <h3>
+                    Into Nature
+                </h3>
+
+                <p>
+                    Walk through forests, villages
+                    and mountain trails.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Real Experiences
+                </h3>
+
+                <p>
+                    Experience the Himalayas naturally.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="about">
+
+        <div class="about">
+
+            <h2>
+                Discover Uttarakhand
+            </h2>
+
+            <p>
+                From quiet forest trails to wide
+                Himalayan views, Uttarakhand offers
+                adventures that stay with you.
+            </p>
+
+            <p>
+                Keshav Trekking aims to help travellers
+                experience the mountains beyond the
+                ordinary tourist route.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section id="gallery">
+
+        <div class="section-heading">
+
+            <h2>
+                Moments From The Mountains
+            </h2>
+
+            <p>
+                Real photographs from the company's
+                treks can be added here.
+            </p>
+
+        </div>
+
+
+        <div class="gallery">
+
+            <img
+                src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1000&q=80"
+                alt="Himalayan landscape"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=800&q=80"
+                alt="Mountain trekking"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=800&q=80"
+                alt="Mountain landscape"
+            >
+
+        </div>
+
+    </section>
+
+
+    <section class="booking" id="contact">
+
+        <h2>
+            Ready For The Mountains?
+        </h2>
+
+        <p>
+            Start planning your Himalayan adventure.
+        </p>
+
+        <a href="#" class="button">
+            BOOK / ENQUIRE
+        </a>
+
+    </section>
+
+
+    <footer>
+
+        <div>
+            © 2026 Keshav Trekking
+        </div>
+
+        <div>
+            Uttarakhand, India
+        </div>
+
+    </footer>
+
+</body>
+
+</html>       </html>
