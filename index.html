@@ -4,13 +4,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Keshav Trekking | Uttarakhand Adventures</title>
-<meta name="description" content="Explore Nag Tibba and discover the beauty of Uttarakhand with Keshav Trekking. Contact us to plan your trekking adventure.">
-<meta name="theme-color" content="#12372a">
+<meta name="description" content="Explore Nag Tibba and Uttarakhand with Keshav Trekking.">
 
 <style>
-/* BASIC */
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +16,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;
 }
 
 body {
@@ -62,6 +58,7 @@ h2 {
 }
 
 /* HEADER */
+
 header {
     background: #12372a;
     color: white;
@@ -77,66 +74,33 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    white-space: nowrap;
 }
 
 nav {
     display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 22px;
 }
 
 nav a {
     color: white;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 nav a:hover {
     color: #e4b95b;
 }
 
-/* BUTTONS */
-.btn {
-    display: inline-block;
-    padding: 13px 25px;
-    border: 1px solid #d19a32;
-    border-radius: 5px;
-    background: #d19a32;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    transition: background 0.2s;
-}
+/* HERO */
 
-.btn:hover {
-    background: #b57f20;
-}
-
-.hero-outline {
-    background: transparent;
-    border-color: white;
-    color: white;
-}
-
-.hero-outline:hover {
-    background: white;
-    color: #12372a;
-}
-
-/* HOMEPAGE */
 .hero {
     min-height: 85vh;
     background:
-        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.55)),
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.5)),
         url("images/test_1.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -162,10 +126,14 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
 .hero-description {
     max-width: 650px;
     margin: 0 auto 30px;
-    font-size: 20px;
 }
 
 .hero-buttons {
@@ -175,14 +143,40 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
-/* FEATURED TREK */
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 5px;
+    background: #d19a32;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #b57f20;
+}
+
+.hero-outline {
+    background: transparent;
+    border: 1px solid white;
+}
+
+.hero-outline:hover {
+    background: white;
+    color: #12372a;
+}
+
+/* TREK */
+
 .trek-card {
     max-width: 900px;
     margin: auto;
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 25px rgba(0,0,0,.1);
 }
 
 .trek-card img {
@@ -202,7 +196,7 @@ nav a:hover {
 
 .trek-info {
     display: flex;
-    gap: 12px;
+    gap: 15px;
     flex-wrap: wrap;
     margin: 20px 0;
 }
@@ -214,6 +208,7 @@ nav a:hover {
 }
 
 /* WHY US */
+
 .features {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -225,7 +220,7 @@ nav a:hover {
     padding: 30px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
 }
 
 .feature h3 {
@@ -238,6 +233,7 @@ nav a:hover {
 }
 
 /* ITINERARY */
+
 .itinerary {
     max-width: 800px;
     margin: auto;
@@ -248,7 +244,7 @@ nav a:hover {
     padding: 22px;
     margin-bottom: 15px;
     border-left: 5px solid #d19a32;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    box-shadow: 0 3px 10px rgba(0,0,0,.06);
 }
 
 .day h3 {
@@ -257,6 +253,7 @@ nav a:hover {
 }
 
 /* ABOUT */
+
 .discover {
     background: #12372a;
     color: white;
@@ -266,10 +263,11 @@ nav a:hover {
     max-width: 800px;
     margin: auto;
     text-align: center;
-    color: #eee;
+    color: #ddd;
 }
 
 /* GALLERY */
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -283,6 +281,7 @@ nav a:hover {
 }
 
 /* BOOKING */
+
 .booking {
     background: #eee9dc;
 }
@@ -293,7 +292,7 @@ nav a:hover {
     background: white;
     padding: 35px;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
 }
 
 .form-group {
@@ -307,47 +306,273 @@ nav a:hover {
 }
 
 .form-group input,
-.form-group select,
-.form-group textarea {
+.form-group select {
     width: 100%;
     padding: 13px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-family: inherit;
     font-size: 15px;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: 2px solid #d19a32;
-    border-color: #d19a32;
 }
 
 .booking-form .btn {
     width: 100%;
 }
+</style>
+</head>
 
-/* CONTACT */
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">Keshav Trekking</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#treks">Treks</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#booking">Book</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="hero-small">UTTARAKHAND ADVENTURES</div>
+        <h1>Discover the Beauty of the Himalayas</h1>
+        <p class="hero-description">
+            Explore mountain trails, peaceful forests and unforgettable
+            adventures with Keshav Trekking.
+        </p>
+        <div class="hero-buttons">
+            <a href="#treks" class="btn">Explore Treks</a>
+            <a href="tel:+917503772800" class="btn hero-outline">Call Now</a>
+        </div>
+    </div>
+</section>
+
+<section id="treks">
+    <div class="container">
+        <h2>Featured Trek</h2>
+        <p class="section-text">
+            Experience the beauty of the Himalayas on an unforgettable adventure.
+        </p>
+
+        <div class="trek-card">
+            <img src="images/test_8.jpg" alt="Nag Tibba Trek">
+            <div class="trek-content">
+                <h3>Nag Tibba Trek</h3>
+                <p>
+                    Nag Tibba is a popular weekend trek in Uttarakhand.
+                    Enjoy forest trails, mountain views and peaceful
+                    Himalayan landscapes.
+                </p>
+                <div class="trek-info">
+                    <div class="info-box">📍 Uttarakhand</div>
+                    <div class="info-box">⛰️ Nag Tibba</div>
+                    <div class="info-box">🥾 Beginner Friendly</div>
+                    <div class="info-box">🌲 Himalayan Forest</div>
+                </div>
+                <a href="#booking" class="btn">Book This Trek</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Why Trek With Us?</h2>
+        <p class="section-text">
+            Discover Uttarakhand with a local trekking experience.
+        </p>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🏔️</div>
+                <h3>Local Experience</h3>
+                <p>
+                    Experience the mountains through local knowledge
+                    and genuine Himalayan hospitality.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🥾</div>
+                <h3>Small Groups</h3>
+                <p>
+                    Enjoy a more personal and comfortable trekking experience.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🌿</div>
+                <h3>Nature First</h3>
+                <p>
+                    Explore beautiful mountain landscapes while respecting nature.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Sample Itinerary</h2>
+        <p class="section-text">
+            Sample itinerary for the Nag Tibba Trek.
+        </p>
+
+        <div class="itinerary">
+            <div class="day">
+                <h3>Day 1 — Departure & Trek</h3>
+                <p>
+                    Travel towards the trek starting point and begin the mountain trail.
+                </p>
+            </div>
+
+            <div class="day">
+                <h3>Day 2 — Nag Tibba Summit</h3>
+                <p>
+                    Trek towards the summit and enjoy Himalayan mountain views.
+                </p>
+            </div>
+
+            <div class="day">
+                <h3>Day 3 — Return Journey</h3>
+                <p>
+                    Descend from the mountains and return towards the departure point.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="discover" id="about">
+    <div class="container">
+        <h2>Discover Uttarakhand</h2>
+        <p>
+            Uttarakhand is home to spectacular Himalayan landscapes,
+            dense forests, peaceful villages and beautiful trekking routes.
+            Experience the mountains with Keshav Trekking.
+        </p>
+    </div>
+</section>
+
+<section id="gallery">
+    <div class="container">
+        <h2>Our Gallery</h2>
+        <p class="section-text">
+            A glimpse of Himalayan landscapes and trekking experiences.
+        </p>
+
+        <div class="gallery">
+            <img src="images/test_2.jpg" alt="Mountain sunset" loading="lazy">
+            <img src="images/test_3.jpg" alt="Mountain clouds" loading="lazy">
+            <img src="images/test_4.jpg" alt="Orange sunset" loading="lazy">
+            <img src="images/test_5.jpg" alt="Himalayan mountains" loading="lazy">
+            <img src="images/test_6.png" alt="Dandelion in the mountains" loading="lazy">
+            <img src="images/test_7.jpg" alt="Mountain forest" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<section class="booking" id="booking">
+    <div class="container">
+        <h2>Book Your Trek</h2>
+        <p class="section-text">
+            Fill in your details and continue to WhatsApp to send your enquiry.
+        </p>
+
+        <form class="booking-form" id="bookingForm">
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" required
+                       placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number *</label>
+                <input type="tel" id="mobile" required
+                       inputmode="tel"
+                       placeholder="Enter mobile number">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email (optional)</label>
+                <input type="email" id="email"
+                       placeholder="Enter email address">
+            </div>
+
+            <div class="form-group">
+                <label for="trekkers">Number of Trekkers *</label>
+                <select id="trekkers" required>
+                    <option value="">Select number</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6+">6+</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Preferred Trek Date *</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message (optional)</label>
+                <input type="text" id="message"
+                       placeholder="Any special requirement?">
+            </div>
+
+            <button type="submit" class="btn">
+                Continue to WhatsApp
+            </button>
+        </form>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container contact">
+        <h2>Contact Us</h2>
+        <p>📍 Uttarakhand, India</p>
+        <p>📞 Phone: <a href="tel:+917503772800">Call Us Now</a></p>
+        <p>
+            📱 WhatsApp:
+            <a href="https://wa.me/917503772800"
+               target="_blank" rel="noopener noreferrer">
+                +91 7503772800
+            </a>
+        </p>
+        <p>✉️ Email: keshavtrekking@example.com</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Keshav Trekking. All Rights Reserved.</p>
+</footer>
+
+<!-- Floating WhatsApp icon: opens a normal chat with no pre-filled message -->
+
+<a
+    href="https://wa.me/917503772800"
+    class="whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with us on WhatsApp"
+>💬</a>
+
+<style>
 .contact {
     text-align: center;
 }
 
 .contact p {
-    margin: 10px 0;
-    overflow-wrap: anywhere;
+    margin: 8px 0;
 }
 
-.contact a {
-    color: #176b43;
-    font-weight: bold;
-}
-
-.contact a:hover {
-    text-decoration: underline;
-}
-
-/* FOOTER */
 footer {
     background: #0d291f;
     color: white;
@@ -355,7 +580,6 @@ footer {
     padding: 25px;
 }
 
-/* FLOATING WHATSAPP */
 .whatsapp {
     position: fixed;
     right: 20px;
@@ -369,42 +593,24 @@ footer {
     align-items: center;
     justify-content: center;
     font-size: 27px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.25);
     z-index: 999;
+    box-shadow: 0 3px 10px rgba(0,0,0,.25);
 }
 
-.whatsapp:hover {
-    background: #1eae54;
-}
-
-/* TABLET */
 @media (max-width: 768px) {
-    header {
-        padding: 12px 4%;
-    }
-
-    .navbar {
-        flex-direction: column;
+    nav {
         gap: 10px;
     }
 
-    nav {
-        gap: 10px 15px;
-    }
-
     nav a {
-        font-size: 13px;
-    }
-
-    .hero {
-        min-height: 75vh;
+        font-size: 12px;
     }
 
     .hero h1 {
-        font-size: 40px;
+        font-size: 38px;
     }
 
-    .hero-description {
+    .hero p {
         font-size: 17px;
     }
 
@@ -425,41 +631,33 @@ footer {
     }
 }
 
-/* MOBILE */
 @media (max-width: 500px) {
+    header {
+        padding: 12px 4%;
+    }
+
     .logo {
-        font-size: 22px;
+        font-size: 17px;
     }
 
     nav {
-        gap: 8px 12px;
+        gap: 6px;
     }
 
     nav a {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     section {
         padding: 50px 5%;
     }
 
+    .hero {
+        min-height: 75vh;
+    }
+
     .hero h1 {
-        font-size: 33px;
-    }
-
-    .hero-small {
-        letter-spacing: 2px;
-        font-size: 12px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
-        max-width: 260px;
+        font-size: 32px;
     }
 
     .gallery {
@@ -470,412 +668,47 @@ footer {
         height: 250px;
     }
 
-    .trek-content {
-        padding: 22px;
-    }
-
-    .trek-content h3 {
-        font-size: 26px;
-    }
-
     .booking-form {
         padding: 22px;
     }
 
-    .whatsapp {
-        width: 50px;
-        height: 50px;
-        right: 14px;
-        bottom: 14px;
+    .trek-content {
+        padding: 22px;
     }
 }
 </style>
-</head>
 
-<body>
-
-<!-- HEADER -->
-<header>
-    <div class="navbar">
-        <div class="logo">Keshav Trekking</div>
-
-        <nav aria-label="Main navigation">
-            <a href="#home">Home</a>
-            <a href="#treks">Treks</a>
-            <a href="#about">About</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#booking">Book</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
-</header>
-
-<!-- HOMEPAGE -->
-<section class="hero" id="home">
-    <div class="hero-content">
-        <p class="hero-small">UTTARAKHAND ADVENTURES</p>
-
-        <h1>Discover the Himalayas</h1>
-
-        <p class="hero-description">
-            Experience unforgettable trekking adventures,
-            beautiful mountain trails and the natural beauty
-            of Uttarakhand with Keshav Trekking.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="#treks" class="btn">Explore Treks</a>
-
-            <a href="tel:+917503772800"
-               class="btn hero-outline">Call Now</a>
-        </div>
-    </div>
-</section>
-
-<!-- FEATURED TREK -->
-<section id="treks">
-    <div class="container">
-        <h2>Featured Trek</h2>
-
-        <p class="section-text">
-            Experience the beauty of the Himalayas on an
-            unforgettable mountain adventure.
-        </p>
-
-        <div class="trek-card">
-            <img src="images/test_8.jpg"
-                 alt="Nag Tibba Trek"
-                 loading="lazy">
-
-            <div class="trek-content">
-                <h3>Nag Tibba Trek</h3>
-
-                <p>
-                    Nag Tibba is a popular weekend trekking
-                    destination in Uttarakhand. Enjoy forest
-                    trails, mountain views and peaceful
-                    Himalayan landscapes.
-                </p>
-
-                <div class="trek-info">
-                    <div class="info-box">📍 Uttarakhand</div>
-                    <div class="info-box">⛰️ Nag Tibba</div>
-                    <div class="info-box">🥾 Beginner Friendly</div>
-                    <div class="info-box">🌲 Himalayan Forest</div>
-                </div>
-
-                <a href="#booking" class="btn">Book This Trek</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- WHY US -->
-<section id="why-us">
-    <div class="container">
-        <h2>Why Trek With Us?</h2>
-
-        <p class="section-text">
-            Discover Uttarakhand with a local trekking experience.
-        </p>
-
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">🏔️</div>
-                <h3>Local Experience</h3>
-                <p>
-                    Experience the mountains through local
-                    knowledge and genuine Himalayan hospitality.
-                </p>
-            </div>
-
-            <div class="feature">
-                <div class="feature-icon">🥾</div>
-                <h3>Small Groups</h3>
-                <p>
-                    Enjoy a more personal and comfortable
-                    trekking experience.
-                </p>
-            </div>
-
-            <div class="feature">
-                <div class="feature-icon">🌿</div>
-                <h3>Nature First</h3>
-                <p>
-                    Explore beautiful mountain landscapes
-                    while respecting nature.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ITINERARY -->
-<section id="itinerary">
-    <div class="container">
-        <h2>Sample Itinerary</h2>
-
-        <p class="section-text">
-            An example of how your Nag Tibba trekking trip
-            could be planned. The actual schedule may vary.
-        </p>
-
-        <div class="itinerary">
-            <div class="day">
-                <h3>Day 1 — Travel and Trek</h3>
-                <p>
-                    Travel towards the trek starting point
-                    and begin the mountain trail.
-                </p>
-            </div>
-
-            <div class="day">
-                <h3>Day 2 — Summit and Return</h3>
-                <p>
-                    Trek towards the summit, enjoy the mountain
-                    views and descend according to the planned route.
-                </p>
-            </div>
-
-            <div class="day">
-                <h3>Trip Completion</h3>
-                <p>
-                    Return from the trekking area and continue
-                    your onward journey.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section class="discover" id="about">
-    <div class="container">
-        <h2>Discover Uttarakhand</h2>
-
-        <p>
-            Uttarakhand is home to spectacular Himalayan
-            landscapes, dense forests, peaceful villages and
-            beautiful trekking routes. Discover the mountains
-            and experience the outdoors on your next adventure.
-        </p>
-    </div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery">
-    <div class="container">
-        <h2>Our Gallery</h2>
-
-        <p class="section-text">
-            A glimpse of the Himalayan landscapes and
-            trekking experience.
-        </p>
-
-        <div class="gallery">
-            <img src="images/test_2.jpg"
-                 alt="Mountain sunset" loading="lazy">
-
-            <img src="images/test_3.jpg"
-                 alt="Mountains above the clouds" loading="lazy">
-
-            <img src="images/test_4.jpg"
-                 alt="Orange mountain sunset" loading="lazy">
-
-            <img src="images/test_5.jpg"
-                 alt="Himalayan mountains" loading="lazy">
-
-            <img src="images/test_6.png"
-                 alt="Dandelion in the mountains" loading="lazy">
-
-            <img src="images/test_7.jpg"
-                 alt="Mountain forest" loading="lazy">
-        </div>
-    </div>
-</section>
-
-<!-- BOOKING -->
-<section class="booking" id="booking">
-    <div class="container">
-        <h2>Book Your Trek</h2>
-
-        <p class="section-text">
-            Enter your details and send your booking request
-            directly through WhatsApp.
-        </p>
-
-        <form class="booking-form" id="bookingForm">
-            <div class="form-group">
-                <label for="name">Name *</label>
-                <input type="text" id="name"
-                       name="name"
-                       placeholder="Enter your name"
-                       autocomplete="name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="mobile">Mobile Number *</label>
-                <input type="tel" id="mobile"
-                       name="mobile"
-                       placeholder="Enter your mobile number"
-                       autocomplete="tel"
-                       inputmode="tel"
-                       required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email (optional)</label>
-                <input type="email" id="email"
-                       name="email"
-                       placeholder="Enter email address"
-                       autocomplete="email">
-            </div>
-
-            <div class="form-group">
-                <label for="trekkers">Number of Trekkers *</label>
-                <select id="trekkers" name="trekkers" required>
-                    <option value="">Select number</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6+">6 or more</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="date">Preferred Trek Date *</label>
-                <input type="date" id="date"
-                       name="date" required>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Message (optional)</label>
-                <textarea id="message" name="message"
-                          rows="3"
-                          placeholder="Any special requirements?"></textarea>
-            </div>
-
-            <button type="submit" class="btn">
-                Send Booking Request on WhatsApp
-            </button>
-        </form>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-    <div class="container contact">
-        <h2>Contact Us</h2>
-
-        <p>📍 Uttarakhand, India</p>
-
-        
-<p>
-    📞 Phone:
-    <a href="tel:+917503772800">+91 75037 72800</a>
-</p>
-
-
-        <p>
-            💬 WhatsApp:
-            <a href="https://wa.me/917503772800"
-               target="_blank" rel="noopener noreferrer">
-                +91 75037 72800
-            </a>
-        </p>
-
-        <p>
-            ✉️ Email:
-            <a href="mailto:keshavtrekking@example.com">
-                keshavtrekking@example.com
-            </a>
-        </p>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>
-        &copy; 2026 Keshav Trekking. All Rights Reserved.
-    </p>
-</footer>
-
-<!-- FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/917503772800"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="whatsapp"
-   aria-label="Chat with us on WhatsApp">
-    💬
-</a>
-
-<!-- JAVASCRIPT -->
 <script>
-(function () {
-    const dateInput = document.getElementById("date");
-    const bookingForm = document.getElementById("bookingForm");
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-    // Prevent selection of dates in the past.
-    function getLocalDate() {
-        const now = new Date();
-        const year = now.getFullYear();
-        const month = String(now.getMonth() + 1).padStart(2, "0");
-        const day = String(now.getDate()).padStart(2, "0");
+    const name = document.getElementById("name").value.trim();
+    const mobile = document.getElementById("mobile").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const trekkers = document.getElementById("trekkers").value;
+    const date = document.getElementById("date").value;
+    const extraMessage = document.getElementById("message").value.trim();
 
-        return year + "-" + month + "-" + day;
+    if (!name || !mobile || !trekkers || !date) {
+        alert("Please fill in all required fields.");
+        return;
     }
 
-    dateInput.min = getLocalDate();
+    const bookingMessage =
+        "New Trek Booking\n" +
+        "Name: " + name + "\n" +
+        "Mobile: " + mobile + "\n" +
+        "Email: " + (email || "Not provided") + "\n" +
+        "Number of Trekkers: " + trekkers + "\n" +
+        "Preferred Trek Date: " + date + "\n" +
+        "Message: " + (extraMessage || "None");
 
-    bookingForm.addEventListener("submit", function (event) {
-        event.preventDefault();
+    const whatsappURL =
+        "https://wa.me/917503772800?text=" +
+        encodeURIComponent(bookingMessage);
 
-        const name = document.getElementById("name").value.trim();
-        const mobile = document.getElementById("mobile").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const trekkers = document.getElementById("trekkers").value;
-        const date = document.getElementById("date").value;
-        const specialMessage = document.getElementById("message").value.trim();
-
-        if (!name || !mobile || !trekkers || !date) {
-            alert("Please fill in all required fields.");
-            return;
-        }
-
-        // Allow digits, spaces, brackets, plus signs and hyphens.
-        const cleanedMobile = mobile.replace(/[\s()+-]/g, "");
-
-        if (!/^\d{7,15}$/.test(cleanedMobile)) {
-            alert("Please enter a valid mobile number.");
-            return;
-        }
-
-        if (date < getLocalDate()) {
-            alert("Please select today or a future date.");
-            return;
-        }
-
-        const whatsappMessage =
-            "NEW TREK BOOKING\n\n" +
-            "Name: " + name + "\n" +
-            "Mobile: " + mobile + "\n" +
-            "Email: " + (email || "Not provided") + "\n" +
-            "Number of Trekkers: " + trekkers + "\n" +
-            "Preferred Trek Date: " + date + "\n" +
-            "Special Requirement: " + (specialMessage || "None");
-
-        const whatsappNumber = "917503772800";
-
-        const whatsappURL =
-            "https://wa.me/" + whatsappNumber +
-            "?text=" + encodeURIComponent(whatsappMessage);
-
-        // Open WhatsApp with the booking message prepared.
-        window.open(whatsappURL, "_blank", "noopener,noreferrer");
-    });
-})();
+    window.open(whatsappURL, "_blank");
+});
 </script>
 
 </body>
